@@ -88,7 +88,7 @@ Analyze
 > *(Add screenshot here)*
 
 ```markdown
-![Factory Dashboard](images/dashboard.png)
+![Factory Dashboard](dashboard.png)
 ```
 
 ---
