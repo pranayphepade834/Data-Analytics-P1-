@@ -85,11 +85,7 @@ Analyze
 
 ## Factory Optimization Simulator
 
-> *(Add screenshot here)*
-
-```markdown
-![Factory Dashboard](dashboard.png)
-```
+![Factory Dashboard](images/dashboaard.png)
 
 ---
 
