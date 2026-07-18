@@ -1,81 +1,253 @@
-# Nassau Candy — Factory Reallocation & Shipping Optimization Dashboard
+# 🍬 Nassau Candy Factory Reallocation & Shipping Optimization Dashboard
 
-Phase 6 deliverable: an interactive Streamlit app that simulates factory
-reassignment scenarios live, ranks them, and flags risk — built on top of
-the Phase 1–5 analysis (data prep, predictive modeling, clustering,
-simulation, optimization).
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-success?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive_Charts-3F4F75?style=for-the-badge&logo=plotly)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-## Running it
+---
+
+## 📌 Project Overview
+
+The **Nassau Candy Factory Reallocation & Shipping Optimization Dashboard** is an interactive data analytics application developed using **Python, Streamlit, Plotly, Pandas, and Scikit-learn**.
+
+The dashboard helps determine the **optimal manufacturing factory** for candy products by analyzing:
+
+- 🚚 Shipping Distance
+- ⏳ Predicted Lead Time
+- 💰 Profitability
+- ⚠️ Operational Risk
+- 📦 Shipping Method
+- 🌍 Delivery Region
+
+The project combines **machine learning predictions** with **interactive business dashboards** to support data-driven supply chain decisions.
+
+---
+
+## 🎯 Business Problem
+
+Manufacturing the same product across multiple factories can result in different:
+
+- Shipping costs
+- Delivery times
+- Profit margins
+- Operational risks
+
+Selecting the wrong factory increases transportation cost and delivery delays.
+
+This dashboard recommends the most suitable factory by evaluating multiple business factors simultaneously.
+
+---
+
+# ✨ Features
+
+## 🏭 Factory Optimization Simulator
+
+- Compare all manufacturing factories
+- Predict lead time
+- Compare shipping distance
+- Visual performance comparison
+
+---
+
+## 🔄 What-If Scenario Analysis
+
+Simulate different manufacturing locations to analyze:
+
+- Lead time changes
+- Shipping distance variation
+- Profit impact
+
+---
+
+## 📊 Recommendation Dashboard
+
+Automatically recommends the best factory based on:
+
+- Machine Learning predictions
+- Business constraints
+- Shipping optimization
+
+---
+
+## ⚠️ Risk & Impact Panel
+
+Analyze
+
+- Operational Risk
+- Recommendation Confidence
+- Estimated Profit Impact
+
+---
+
+# 📷 Dashboard Preview
+
+## Factory Optimization Simulator
+
+> *(Add screenshot here)*
+
+```markdown
+![Factory Dashboard](images/dashboard.png)
+```
+
+---
+
+## Recommendation Dashboard
+
+> *(Add screenshot here)*
+
+```markdown
+![Recommendation Dashboard](images/recommendation.png)
+```
+
+---
+
+## Risk & Impact Dashboard
+
+> *(Add screenshot here)*
+
+```markdown
+![Risk Dashboard](images/risk.png)
+```
+
+---
+
+# 📊 Machine Learning Workflow
+
+```
+Raw Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Machine Learning Model
+      │
+      ▼
+Lead Time Prediction
+      │
+      ▼
+Factory Recommendation
+      │
+      ▼
+Interactive Dashboard
+```
+
+---
+
+# 🛠 Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| Programming Language | Python |
+| Dashboard | Streamlit |
+| Data Processing | Pandas, NumPy |
+| Visualization | Plotly |
+| Machine Learning | Scikit-learn |
+| IDE | Visual Studio Code |
+| Version Control | Git & GitHub |
+
+---
+
+# 📂 Project Structure
+
+```
+Data-Analytics-P1-/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── nassau_candy_cleaned.csv
+│
+├── images/
+│   ├── dashboard.png
+│   ├── recommendation.png
+│   └── risk.png
+│
+└── LICENSE
+```
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/pranayphepade834/Data-Analytics-P1-.git
+```
+
+Move into the project directory
+
+```bash
+cd Data-Analytics-P1-
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run the Streamlit application
+
+```bash
 streamlit run app.py
 ```
 
-Then open the local URL Streamlit prints (usually `http://localhost:8501`).
+---
 
-Keep `nassau_candy_cleaned.csv` in the **same folder** as `app.py` — the
-app reads it by relative path.
+# 📈 Business Insights
 
-The app is fully self-contained: on first load it retrains its own Linear
-Regression / Random Forest / Gradient Boosting models directly from the
-CSV (cached for the rest of the session), so it doesn't depend on any
-pickled model files that could break across scikit-learn versions on your
-machine.
+The dashboard helps organizations:
 
-## What's in the dashboard
+- Reduce transportation cost
+- Improve delivery performance
+- Optimize factory utilization
+- Increase operational efficiency
+- Support strategic manufacturing decisions
 
-**Sidebar (user controls):**
-- **Product** — selects the product shown in the Simulator and What-If tabs
-- **Region** / **Ship Mode** — filter which historical orders feed every
-  computation across all four tabs
-- **Optimization Priority slider** — 0 = pure lead-time minimization,
-  100 = pure profit maximization. Moving it re-ranks instantly (no
-  recomputation of model predictions — only the composite-score weights
-  change), while filter changes trigger a short "Simulating..." recompute.
+---
 
-**Tabs:**
-1. **Factory Optimization Simulator** — predicted lead time & distance for
-   the selected product across all 5 factories (current highlighted).
-2. **What-If Scenario Analysis** — current vs. best-recommended factory,
-   with lead time / distance / profit deltas.
-3. **Recommendation Dashboard** — ranked reassignment suggestions for all
-   15 products, downloadable as CSV.
-4. **Risk & Impact Panel** — flags any recommended reassignment with a
-   negative profit impact, and any with low stability or low agreement
-   across the 3 underlying models.
+# 🔮 Future Enhancements
 
-## Methodology notes & limitations (please read before presenting results)
+- 📍 Interactive factory map
+- 🌍 Live logistics tracking
+- 🤖 AI-generated recommendations
+- 📦 Inventory optimization
+- 📈 Demand forecasting
+- ☁ Cloud deployment
+- 📄 PDF report generation
 
-**Lead Time is a documented synthetic construction, not the raw data.**
-The source dataset's `Order Date` / `Ship Date` fields are not usable as a
-real lead-time signal (mean gap ~1,321 days, no variation by Ship Mode —
-they appear to have been generated independently). Lead Time here is
-instead built from: Ship Mode base speed + distance sensitivity + a small
-per-factory efficiency effect + mild seasonal congestion + random noise.
-Ship Mode and Distance are legitimate, learnable drivers, so the model and
-rankings are methodologically sound — but treat absolute day counts as
-illustrative rather than literal historical fact.
+---
 
-**Profit impact uses a distance-based shipping-cost proxy** ($0.004 of
-profit erosion per km per unit shipped), since the dataset has no actual
-per-order freight cost field. The *ranking* of factory options is
-reliable (driven by real distance geometry), but the *dollar magnitudes*
-should be recalibrated against real freight-cost data before being used
-in a financial decision.
+# 👨‍💻 Author
 
-**Destination geography is at the State/Province level** (centroid
-coordinates), not exact city/ZIP — a reasonable simplification given the
-project's own framing of the modeling problem as "destination region."
+**Pranay Phepade**
 
-**Scenario Confidence Score** reflects agreement across three
-independently-trained models (Linear Regression, Random Forest, Gradient
-Boosting) on the same scenario — low agreement is a genuine signal that a
-recommendation is less certain, not just decoration.
+Electronics & Telecommunication Engineering  
+Aspiring Data Analyst | Machine Learning Enthusiast
 
-## Files
+### Connect with me
 
-- `app.py` — the dashboard
-- `nassau_candy_cleaned.csv` — cleaned, feature-engineered order-level data
-  (output of Phase 1)
-- `requirements.txt` — Python dependencies
+- GitHub: https://github.com/pranayphepade834
+- LinkedIn: *(Add your LinkedIn profile link here)*
+
+---
+
+# ⭐ Support
+
+If you found this project useful,
+
+⭐ Star this repository on GitHub!
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
