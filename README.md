@@ -222,7 +222,7 @@ Aspiring Data Analyst | Machine Learning Enthusiast
 
 **GitHub:** https://github.com/pranayphepade834
 
-**LinkedIn:** *(Add your LinkedIn profile URL)*
+**LinkedIn:** [(Add your LinkedIn profile URL)](https://www.linkedin.com/in/pranay-phepade-99253a339/)
 
 ---
 
