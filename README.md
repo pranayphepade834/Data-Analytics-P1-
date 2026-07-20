@@ -74,25 +74,25 @@ Analyze:
 
 ## 1. Factory Optimization Simulator
 
-![Factory Optimization Simulator](images/dashboard.png.png)
+![Factory Optimization Simulator](image/dashboard.png.png)
 
 ---
 
 ## 2. What-If Scenario Analysis
 
-![What-If Scenario Analysis](images/simulator.png.png)
+![What-If Scenario Analysis](image/simulator.png.png)
 
 ---
 
 ## 3. Recommendation Dashboard
 
-![Recommendation Dashboard](images/recommendation.png.png)
+![Recommendation Dashboard](image/recommendation.png.png)
 
 ---
 
 ## 4. Risk & Impact Panel
 
-![Risk & Impact Panel](images/Risk.png.png)
+![Risk & Impact Panel](image/Risk.png.png)
 
 ---
 
